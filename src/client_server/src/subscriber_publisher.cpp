@@ -30,9 +30,9 @@ void parity_check(const std_msgs::Float32::ConstPtr& msg)
     float determinant = msg->data;
       
 	if (int(determinant) == 0 || int(determinant) % 2 == 0)
-	ROS_INFO_STREAM("even");
+		ROS_INFO_STREAM("even");
 	else
-	ROS_INFO_STREAM("odd");
+		ROS_INFO_STREAM("odd");
 }
 
 int main(int argc, char **argv)
