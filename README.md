@@ -7,14 +7,16 @@ roscore
 ## Терминал 2:
 ```
 source devel/setup.bash
-rosrun client_server server
+rosrun client_server client_server
 ```
 ## Терминал 3:
 ```
 source devel/setup.bash
-rosrun client_server client
+rosservice call /count_det_server "{x11: 5, x12: -4, x13: 13, x21: 16, x22: 25, x23: -17, x31: 18, x32: -52, x33: -2}" 
 ```
-### Пример запроса (в терминале 3):
+## Терминал 4 (просмотр сообщения в топике):
 ```
-5 -4 13 16 25 -17 18 -52 -2
+source devel/setup.bash
+rostopic echo topic_parity
+
 ```
